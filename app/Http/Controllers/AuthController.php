@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -20,8 +21,8 @@ class AuthController extends Controller
             'password' => ['required', 'min:6']
         ]);
 
-
-
+        User::create($FromData);
+        return redirect('/');
 
     }
 }
