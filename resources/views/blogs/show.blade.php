@@ -17,6 +17,7 @@
         </div>
     </div>
 
+    <x-comment :comments="$blog->comments"/>
     <x-subscribe/>
 
     <x-blog-you-like :randomBlogs="$randomBlogs"/>
